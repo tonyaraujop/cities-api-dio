@@ -8,4 +8,6 @@ import com.citiesapi.dio.countries.entity.Country;
 @Repository
 public interface CountryRepository extends JpaRepository<Country, Long>{
 
+	
+	
 }
