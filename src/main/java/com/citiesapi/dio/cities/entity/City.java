@@ -2,12 +2,14 @@ package com.citiesapi.dio.cities.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.citiesapi.dio.states.entity.State;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "cidade")
@@ -21,23 +23,22 @@ public class City {
 	@Column(name = "nome")
 	private String name;
 
-	// private Integer uf;
+	//private Integer uf;
 
-	// @ManyToOne
 	@ManyToOne
 	@JoinColumn(name = "uf", referencedColumnName = "id")
 	private State state;
 
 	private Integer ibge;
 
-	// 1st
+//	1st
 	@Column(name = "lat_lon")
 	private String geolocation;
 
-	// 2nd
-	// @Type(type = "point")
-	// @Column(name = "lat_lon", updatable = false, insertable = false)
-	// private Point location;
+//	 2nd
+//	 @Type(type = "point")
+//	 @Column(name = "lat_lon", updatable = false, insertable = false)
+//	 private Point location;
 
 	public City() {
 	}
@@ -57,9 +58,9 @@ public class City {
 		return name;
 	}
 
-	// public Integer getUf() {
-	// return uf;
-	// }
+//	public Integer getUf() {
+//		return uf;
+//	}
 
 	public Integer getIbge() {
 		return ibge;

@@ -1,5 +1,7 @@
 package com.citiesapi.dio.countries.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,8 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "pais")
-public class Country {
-
+public class Country{
+	
 	@Id
 	private Long id;
 

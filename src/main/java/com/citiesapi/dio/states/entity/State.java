@@ -22,7 +22,7 @@ import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 @Table(name = "estado")
 
 @TypeDefs({ @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class) })
-public class State {
+public class State{
 
 	@Id
 	private Long id;

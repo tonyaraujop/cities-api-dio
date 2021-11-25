@@ -19,14 +19,14 @@ public class CityResource {
     this.repository = repository;
   }
 
-  /* 1st
-  @GetMapping
-  public List<City> cities() {
-      return repository.findAll();
-  }*/
+  // 1st
+//  @GetMapping
+//  public List<City> cities() {
+//      return repository.findAll();
+//  }
 
-  @GetMapping
-  public Page<City> cities(final Pageable page) {
-    return repository.findAll(page);
-  }
+	@GetMapping
+	public Page<City> cities(final Pageable page) {
+		return (Page<City>) repository.findAll(page);
+	}
 }
