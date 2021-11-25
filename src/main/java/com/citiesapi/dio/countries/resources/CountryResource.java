@@ -17,7 +17,7 @@ public class CountryResource {
 	@Autowired
 	private CountryRepository repository;
 
-	@GetMapping("/pesquisa")
+	@GetMapping
 	public List<Country> countries(){
 		return repository.findAll();
 	}
