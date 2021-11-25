@@ -27,6 +27,8 @@ public class DistanceResource {
 		log.info("byPoints");
 		return ResponseEntity.ok().body(service.distanceByPointsInMiles(city1, city2));
 	}
+	
+	
 
 	@GetMapping("/in-meters/from/{from}/to/{to}")
 	public ResponseEntity byCube(@PathVariable(name = "from") final Long city1, @PathVariable(name = "to") final Long city2) {
